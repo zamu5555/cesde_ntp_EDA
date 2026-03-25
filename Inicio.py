@@ -13,7 +13,7 @@ st.markdown("""
     <style>
     .main {
         background-color: #f8f9fa;
-    }
+    
     .stAlert {
         border-radius: 10px;
     }
@@ -22,7 +22,7 @@ st.markdown("""
 
 # --- Título Principal ---
 st.title("🚀 Proyecto Integrador: Analítica de Datos")
-st.subheader("Transformando Información en Decisiones Estratégicas")
+st.subheader("Analitica de casos sobre el dengue")
 
 st.divider()
 
@@ -32,10 +32,9 @@ col1, col2 = st.columns([2, 1])
 with col1:
     st.header("📖 Introducción")
     st.write("""
-    Este proyecto nace de la necesidad de aplicar técnicas avanzadas de **Analítica de Datos** para resolver problemas complejos en el mundo real. 
-    A través de este tablero interactivo, exploraremos cómo la ciencia de datos puede revelar patrones ocultos, optimizar procesos y predecir tendencias futuras.
-    
-    Nuestro enfoque se centra en la **Exploración de Datos (EDA)**, la limpieza de registros y la generación de conocimiento accionable a partir de fuentes de datos diversas.
+    El dengue es una enfermedad que afecta de manera significativa al departamento de Antioquia. Para comprender mejor su comportamiento, es fundamental analizar los datos disponibles.
+
+    En este proyecto se realiza el análisis de una tabla de datos sobre casos de dengue, con el objetivo de identificar patrones, tendencias y posibles factores asociados. Esto permite obtener información útil para apoyar la toma de decisiones en la prevención y control de la enfermedad.
     """)
 
 with col2:
@@ -49,16 +48,16 @@ obj_gen, obj_esp = st.columns(2)
 with obj_gen:
     st.subheader("Objetivo General")
     st.markdown("""
-    - Desarrollar un ecosistema analítico integral que permita la carga, procesamiento y análisis técnico de grandes volúmenes de datos para la toma de decisiones.
+    - Analizar los datos de una tabla sobre casos de dengue en Antioquia para identificar patrones, tendencias y factores relevantes que contribuyan a la comprensión y control de la enfermedad.
     """)
 
 with obj_esp:
     st.subheader("Objetivos Específicos")
     st.markdown("""
-    - Implementar un módulo de **Análisis Exploratorio (EDA)** adaptable a cualquier dataset CSV.
-    - Fomentar el pensamiento crítico mediante actividades de "Detective de Datos".
-    - Automatizar la identificación de anomalías y valores faltantes en la información.
-    - Escalar el proyecto hacia modelos predictivos y visualizaciones avanzadas.
+    - Examinar la estructura y calidad de la tabla de datos de dengue.
+    - Identificar la distribución de casos según variables como tiempo, ubicación u otros factores disponibles.
+    - Analizar tendencias y variaciones en los casos de dengue.
+    - Presentar los resultados mediante gráficos o herramientas visuales para facilitar su interpretación
     """)
 
 st.divider()
@@ -68,9 +67,10 @@ st.header("👥 Equipo de Trabajo (Integrantes)")
 
 # Puedes ajustar los nombres aquí
 integrantes = [
-    {"nombre": "Integrante 1", "rol": "Analista de Datos", "emoji": "👨‍💻"},
-    {"nombre": "Integrante 2", "rol": "Ingeniero de Datos", "emoji": "👩‍🔬"},
-    {"nombre": "Integrante 3", "rol": "Arquitecto de Soluciones", "emoji": "👨‍💼"},
+    {"nombre": "Samuel Diaz Vanegas", "rol": "Analista de Datos", "emoji": "👨‍💻"},
+    {"nombre": "Santiago Bohorquez Saldaña", "rol": "Ingeniero de Datos", "emoji": "👩‍🔬"},
+    {"nombre": "Jhonatan Tabares Jaramillo", "rol": "Arquitecto de Soluciones", "emoji": "👨‍💼"},
+    {"nombre": "Mayra Alejandra Alzate Sanchez", "rol": "Arquitecto de Soluciones", "emoji": "👨‍💼"},
 ]
 
 cols = st.columns(len(integrantes))
