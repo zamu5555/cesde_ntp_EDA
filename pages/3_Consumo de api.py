@@ -3,13 +3,13 @@ import pandas as pd
 import requests
 
 # Configuración de la página
-st.set_page_config(page_title="Gestión Corporativa Colombia - MockAPI", layout="wide")
+st.set_page_config(page_title="Gestión Reserva de libros - MockAPI", layout="wide")
 
-st.title("🏢 Gestión Corporativa: Vendedores y Sucursales en Colombia")
+st.title("🏢 Gestión Reserva de libros")
 st.markdown("""
 ### Objetivo
-En esta sección, consumiremos **dos entidades** personalizadas creadas en **MockAPI** que simulan datos de una empresa en Colombia.
-Los datos incluyen información sobre el equipo de ventas y las sedes físicas de la organización.
+En esta sección, consumiremos **dos entidades** personalizadas creadas en **MockAPI** que simulan datos de una biblioteca en Colombia.
+Los datos incluyen información sobre el reserva de libros, libros disponibles, unidades, entre otros.
 """)
 
 # --- Configuración de la API (MockAPI) ---
@@ -88,7 +88,7 @@ if not df_Users.empty:
 
     st.dataframe(f_vendedores, use_container_width=True)
 else:
-    st.info("💡 Esperando datos de 'vendedores'...")
+    st.info("💡 Esperando datos de 'Libros'...")
 
 st.divider()
 
@@ -117,10 +117,10 @@ if not df_ReservaLibro.empty:
     # Métricas de Sucursales
     ms1, ms2 = st.columns(2)
     with ms1:
-        st.metric("Total Sedes Activas", len(df_ReservaLibro))
+        st.metric("Total Reserva de Libros", len(df_ReservaLibro))
     with ms2:
         empleados = pd.to_numeric(df_ReservaLibro['cantidad'], errors='coerce').fillna(0)
-        st.metric("Personal Total en Sedes", f"{empleados.sum():,.0f} Personas" if not df_ReservaLibro.empty else "N/A")
+        st.metric(" Total de Reservas de libros", f"{empleados.sum():,.0f} libros" if not df_ReservaLibro.empty else "N/A")
 
     st.dataframe(df_ReservaLibro, use_container_width=True)
 else:
