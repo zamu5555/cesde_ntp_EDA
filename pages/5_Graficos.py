@@ -6,7 +6,7 @@ st.set_page_config(layout="wide")
 
 st.title("📊 Dashboard Dengue")
 
-df = pd.read_csv("data\sivigila_dengue.csv", low_memory=False)
+df = pd.read_csv("data/sivigila_dengue.csv", low_memory=False)
 
 df = df.fillna("SIN RESPUESTA")
 
