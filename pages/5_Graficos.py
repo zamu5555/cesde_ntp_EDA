@@ -128,6 +128,7 @@ fig6 = px.scatter(
 st.plotly_chart(fig6, use_container_width=True)
 
 promedio_edad = df.groupby('sexo_')['edad_'].mean().reset_index()
+promedio_edad['edad_'] = promedio_edad['edad_'].round(0).astype(int)
 
 fig7 = px.bar(
     promedio_edad,
