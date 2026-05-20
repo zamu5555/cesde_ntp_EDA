@@ -8,6 +8,8 @@ st.title("Graficos Dengue")
 
 df = pd.read_csv("data/sivigila_dengue.csv", low_memory=False)
 
+print(df.info)
+
 df = df.fillna("SIN RESPUESTA")
 
 df = df.replace([
