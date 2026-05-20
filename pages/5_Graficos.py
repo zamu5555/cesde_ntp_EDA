@@ -4,7 +4,7 @@ import plotly.express as px
 
 st.set_page_config(layout="wide")
 
-st.title("📊 Dashboard Dengue")
+st.title("Graficos Dengue")
 
 df = pd.read_csv("data/sivigila_dengue.csv", low_memory=False)
 
