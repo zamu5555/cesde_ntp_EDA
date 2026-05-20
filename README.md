@@ -1,4 +1,4 @@
-# Instalación — Proyecto Análisis Base de Datos --DENGUE
+# Instalación — Proyecto Análisis Base de Datos DENGUE
 
 ## Pasos
 
