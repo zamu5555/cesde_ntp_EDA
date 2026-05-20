@@ -69,7 +69,7 @@ fig2 = px.pie(
     names='sexo_',
     values='Cantidad',
     hole=0.5,
-    title='Distribución por Sexo'
+    title='Contagios según el sexo'
 )
 
 st.plotly_chart(fig2, use_container_width=True)
@@ -78,7 +78,8 @@ fig3 = px.histogram(
     df_mayores,
     x='edad_',
     nbins=20,
-    title='Distribución de Mayores de 60 Años'
+    title='Incidencia de casos en Mayores de 60 Años',
+    range_x=[60, 100]
 )
 
 st.plotly_chart(fig3, use_container_width=True)
@@ -121,7 +122,7 @@ fig6 = px.scatter(
     color='sexo_',
     size='Casos',
     hover_data=['sexo_'],
-    title='Casos por Semana y Sexo'
+    title='Casos semanales según el género'
 )
 
 st.plotly_chart(fig6, use_container_width=True)
@@ -134,7 +135,7 @@ fig7 = px.bar(
     y='edad_',
     color='sexo_',
     text='edad_',
-    title='Promedio de Edad por Sexo'
+    title='Edad promedio de contagiados según el sexo'
 )
 
 st.plotly_chart(fig7, use_container_width=True)
@@ -148,7 +149,7 @@ fig8 = px.bar(
     color='sexo_',
     barmode='group',
     text='Casos',
-    title='Casos por Año y Sexo'
+    title='Casos anuales en hombres y mujeres'
 )
 
 st.plotly_chart(fig8, use_container_width=True)
